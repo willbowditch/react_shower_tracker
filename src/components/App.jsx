@@ -47,8 +47,7 @@ class App extends Component {
                     }
                 })
             }
-        }
-        )
+        })
     }
 
 
@@ -63,10 +62,8 @@ class App extends Component {
                         showerData={showerData}
                         handleShowerInUse={this.handleShowerInUse}
                     />
-
                 </div>
             </div>
-
         )
     }
 }

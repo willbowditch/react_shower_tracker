@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 // Return a table header
 const TableHeader = () => {
@@ -12,6 +13,7 @@ const TableHeader = () => {
         </thead>
     )
 }
+
 
 // Loop through each row and print out a table
 const TableBody = (props) => {
@@ -41,6 +43,11 @@ const TableBody = (props) => {
     )
 }
 
+TableBody.propTypes = {
+    showerData: PropTypes.array,
+    handleShowerInUse: PropTypes.func
+}
+
 // Higher level component to make use of the table functional components
 class Table extends Component {
     constructor(props){
@@ -60,6 +67,11 @@ class Table extends Component {
             </table>
         )
     }
+}
+
+Table.propTypes = {
+    showerData: PropTypes.array.isRequired,
+    handleShowerInUse: PropTypes.func.isRequired
 }
 
 export default Table
